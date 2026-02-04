@@ -32,7 +32,7 @@ Once the hybrid AD setup is in place, the lab will expand further to include clo
 - Explore modern Microsoft tools and technologies in a safe lab setting
 - Learn, experiment, break things, fix them, and most importantly — **have fun doing it**
 
-![alt text](<Screenshot 2026-02-04 203145.png>)
+<img width="821" height="372" alt="Screenshot 2026-02-04 203145" src="https://github.com/user-attachments/assets/5644619f-403b-43db-9902-8335abfffd87" />
 
 ## 2.Active Directory Installation and Initial Configuration
 
@@ -71,7 +71,7 @@ All company-related objects are placed under this OU to simplify administration 
 
 ### Detailed OU Layout
 
-![alt text](<Screenshot 2026-02-02 171008.png>)
+<img width="364" height="529" alt="Screenshot 2026-02-02 171008" src="https://github.com/user-attachments/assets/e5ab97bd-49c5-4d97-b33f-22ffb2aa53df" />
 
 ### OU Design Rationale
 
@@ -185,7 +185,7 @@ This association is documented using the **Description** field in Active Directo
 
 This mirrors real-world enterprise practices and makes it easier to manage users, devices, and permissions as the environment grows.
 
-![alt text](<Screenshot 2026-02-04 203632.png>)
+<img width="809" height="610" alt="Screenshot 2026-02-04 203632" src="https://github.com/user-attachments/assets/41a38606-cb4f-49ba-ad30-2898a902a025" />
 
 ## 3. File Server Deployment and Configuration
 
@@ -272,6 +272,6 @@ After configuration:
 
 This completes the deployment and configuration of the **on-premises File Server**.
 
-![alt text](<Screenshot 2026-02-04 205234.png>)
+<img width="801" height="578" alt="Screenshot 2026-02-04 205234" src="https://github.com/user-attachments/assets/47378771-2176-4414-8bf0-64b74ccebb43" />
 
 ## 4.
