@@ -274,4 +274,73 @@ This completes the deployment and configuration of the **on-premises File Server
 
 <img width="801" height="578" alt="Screenshot 2026-02-04 205234" src="https://github.com/user-attachments/assets/47378771-2176-4414-8bf0-64b74ccebb43" />
 
-## 4.
+## 4. Print Server Deployment and Configuration
+
+In this step, a dedicated **Print Server** was deployed to provide centralized printing resources for the HR and Finance departments. This setup simulates a typical enterprise print server environment.
+
+### Server Deployment
+
+A **Windows Server 2022** virtual machine was created and configured with:
+
+- Network connectivity verified within the `ad.neno.info` domain  
+- **Primary DNS** set to the Domain Controller  
+- Server renamed to `PRINT-SERVER`  
+- Joined to the Active Directory domain as a **member server**  
+
+The server object was moved to the following OU:
+
+- `NENO > Computers > Servers`
+
+### Roles and Features
+
+The following role was installed on the server:
+
+- **Print and Document Services**
+
+### Printer Configuration
+
+Two virtual printers were added to simulate departmental printers:
+
+- **HR-PRN01**  
+  - Assigned a fake IP address  
+  - Simple description added  
+
+- **Finance-PRN01**  
+  - Assigned a fake IP address  
+  - Simple description added  
+
+These virtual printers allow testing of printer deployment and access without requiring physical printers.
+
+### Security Groups
+
+On **Domain Controller 1**, two security groups were created to manage printer access:
+
+- **HR-Printer-Access** – contains HR department users  
+- **Finance-Printer-Access** – contains Finance department users  
+
+These groups control which users can access which printers.
+
+### Group Policy for Printer Deployment
+
+A **Group Policy Object (GPO)** was created on **Domain Controller 1** to deploy printers automatically:
+
+- **GPO Name:** `GPO_Deploy_HR_Printers`  
+- **Settings:**  
+  - Maps `HR-PRN01` to HR users in `HR-Printer-Access`  
+  - Maps `Finance-PRN01` to Finance users in `Finance-Printer-Access`  
+
+This ensures that printers are automatically available to the correct users based on their department.
+
+### Verification
+
+After configuration:
+
+- Users successfully received the mapped printers on login  
+- Printer access was restricted according to department membership  
+- Test print jobs were sent to the server successfully  
+- Jobs eventually failed with an error due to the absence of real physical printers  
+
+This step completes the deployment and configuration of the **on-premises Print Server**, demonstrating GPO-based printer management and departmental access control.
+
+<img width="811" height="441" alt="Screenshot 2026-02-05 202356" src="https://github.com/user-attachments/assets/b2b3afba-046a-47e5-bec3-edb0f6460f48" />
+
